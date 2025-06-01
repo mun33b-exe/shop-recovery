@@ -14,9 +14,12 @@ Route::post('/', function () {
 })->name('launcher.view');
 
 Route::get('/register/view', [ShopkeeperController::class, 'index'])->name('register.shop.view');
-Route::get('/records/view', [ShopkeeperController::class, 'index'])->name('add.records.view');
+Route::get('/records/view', [ShopkeeperController::class, 'records_view'])->name('add.records.view');
 Route::get('/records/list', [ShopkeeperController::class, 'index'])->name('view.records');
 Route::post('/register/view', [ShopkeeperController::class, 'index'])->name('register.shop.view');
-Route::post('/records/view', [ShopkeeperController::class, 'index'])->name('add.records.view');
+Route::post('/records/view', [ShopkeeperController::class, 'records_view'])->name('add.records.view');
 Route::post('/records/list', [ShopkeeperController::class, 'index'])->name('view.records');
 Route::post('/register', [ShopkeeperController::class, 'store'])->name('register.shop');
+
+Route::post('/add/records', [RetailerController::class, 'store'])->name('add.records');
+Route::get('/add/records', [RetailerController::class, 'store'])->name('add.records');

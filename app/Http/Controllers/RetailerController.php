@@ -28,7 +28,14 @@ class RetailerController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = new Retailer();
+        $data->product_name = $request->product_name;
+        $data->product_quantity = $request->product_quantity;
+        $data->price = $request->price;
+        $data->shopkeeper_id = $request->shopkeeper_id;
+        $data->save();
+
+        return redirect()->back()->with('message', 'Retailer added successfully');
     }
 
     /**

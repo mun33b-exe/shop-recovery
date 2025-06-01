@@ -69,4 +69,10 @@ class ShopkeeperController extends Controller
     {
         //
     }
+
+    public function records_view()
+    {
+        $shopkeepers = Shopkeeper::all();
+        return view('add_record', compact('shopkeepers'));
+    }
 }
