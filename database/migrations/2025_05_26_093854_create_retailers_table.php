@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('product_name');
             $table->string('product_quantity');
+            $table->string('price');
             $table->unsignedBigInteger('shopkeeper_id');
             $table->foreign('shopkeeper_id')->references('id')->on('shopkeepers')->onDelete('cascade');
             $table->timestamps();

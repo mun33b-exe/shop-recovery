@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Shopkeeper;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class ShopkeeperController extends Controller
 {
@@ -12,7 +13,7 @@ class ShopkeeperController extends Controller
      */
     public function index()
     {
-        //
+        return view('register_shopkeeper');
     }
 
     /**
@@ -32,7 +33,9 @@ class ShopkeeperController extends Controller
         $data->name = $request->name;
         $data->email = $request->email;
         $data->phone = $request->phone;
-        $data->password = $request->password;
+        $data->password = Hash::make($request->password); 
+        $data->save();
+        return redirect()->back()->with('message', 'Shopkeeper added successfully');
     }
 
     /**
