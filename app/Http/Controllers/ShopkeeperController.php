@@ -32,7 +32,7 @@ class ShopkeeperController extends Controller
         $data->name = $request->name;
         $data->email = $request->email;
         $data->phone = $request->phone;
-        $data->password = 
+        $data->password = $request->password;
     }
 
     /**
