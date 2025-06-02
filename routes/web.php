@@ -23,3 +23,4 @@ Route::post('/register', [ShopkeeperController::class, 'store'])->name('register
 
 Route::post('/add/records', [RetailerController::class, 'store'])->name('add.records');
 Route::get('/add/records', [RetailerController::class, 'store'])->name('add.records');
+Route::get('/add/records', [RetailerController::class, 'store'])->name('add.records');
