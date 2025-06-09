@@ -8,7 +8,7 @@
 <body>
     <div>
         <h1>
-            Add Record Here
+            Add Record Here 
         </h1>
         <form action="{{route('add.records')}}" method="post">
             @csrf
