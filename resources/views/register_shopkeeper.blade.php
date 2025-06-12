@@ -9,6 +9,7 @@
     <form action="{{route('register.shop')}}" method="post">
         @csrf
         <h1>Register Shopkeeper Here</h1>
+        <h1>Register Shopkeeper Here</h1>
         <div>
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
